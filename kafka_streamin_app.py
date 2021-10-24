@@ -38,5 +38,5 @@ if __name__=="__main__":
    topic=sys.argv[2]
    tracks=sys.argv[3:]
    kafkaClient=pykafka.KafkaClient(host_port)
-   kafkaProducer=kafkaClient.topics[bytes(topic,'utf-8')].get_producer()
+   kafkaProducer=kafkaClient.topics[bytes(topic).encode('utf-8')].get_producer()
    connect_to_twitter(kafkaProducer,tracks)
