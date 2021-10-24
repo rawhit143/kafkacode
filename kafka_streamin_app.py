@@ -21,7 +21,7 @@ class TweetsListener(StreamListener):
    def on_error(self,status):
       print(status)
       return True
-   def connect_to_twitter(kafkaProducer,tracks):
+def connect_to_twitter(kafkaProducer,tracks):
       api_key="zhZAQipUqh1RoJuz4APTneIaP"
       api_secret="1EfebQPCMRkwsCSLpucK15CYM6CnQCsQGxcAGbttqmziSxMKvL"
       access_token="1452157069608427524-cSwY0QrY3KCoZvs0A6Qb2cQS2OpCxU"
