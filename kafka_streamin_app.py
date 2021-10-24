@@ -14,7 +14,7 @@ class TweetsListener(StreamListener):
         json_data=json.loads(data)
         tweet=json_data['text']
         print(tweet+'\n')
-        self.producer.produce(bytes(json.dumps(tweet),"utf-8"))
+        self.producer.produce(bytes(json.dumps(tweet)).encode('utf-8'))
       except KeyError as e:
 	       print("Error on data ",e)
       return True
